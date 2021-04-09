@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function Search() {
   let [searchword, setSearchword] = useState(null);
+
   function handleSearch(event) {
     event.preventDefault();
-    alert(`Searching for ${searchword}`);
-  }
 
+    //api Call - https://dictionaryapi.dev/
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchword}`;
+    axios.get(apiUrl).then(getUrlResponse);
+  }
+  function getUrlResponse(response) {
+    console.log(response.data);
+  }
   function handleSearchInput(event) {
     setSearchword(event.target.value);
   }
