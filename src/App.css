@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+.App {
+  text-align: center;
+}
+.Search .header {
+  font-family: "Courgette", cursive;
+  background-color: #33415c;
+  padding: 25px 25px 30px 25px;
+  color: white;
+}
+.Search h1 {
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+.Search form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.Search .searchButton {
+  color: white;
+}

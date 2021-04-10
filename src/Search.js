@@ -22,7 +22,7 @@ export default function Search() {
 
   return (
     <div className="Search">
-      <header>
+      <header className="header">
         <h1>Dictionary</h1>
         <form onSubmit={handleSearch}>
           <div className="input-group">
@@ -33,13 +33,24 @@ export default function Search() {
             ></input>
             <button
               type="button"
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-secondary searchButton"
               onClick={handleSearch}
             >
               Go!
             </button>
           </div>
         </form>
+        <small>
+          coded by Jyotsna Jose, open-sourced on GitHub and hosted on
+          <a
+            href="/"
+            src="https://suspicious-swanson-957d5e.netlify.app"
+            target="_blank"
+          >
+            {" "}
+            Netlify
+          </a>
+        </small>
       </header>
       <DisplayResults result={results} />
     </div>
