@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DisplayResults from "./DisplayResults";
 
 export default function Search() {
   let [searchword, setSearchword] = useState(null);
+  let [results, setResults] = useState(null);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -12,7 +14,7 @@ export default function Search() {
     axios.get(apiUrl).then(getUrlResponse);
   }
   function getUrlResponse(response) {
-    console.log(response.data);
+    setResults(response.data[0]);
   }
   function handleSearchInput(event) {
     setSearchword(event.target.value);
@@ -39,6 +41,7 @@ export default function Search() {
           </div>
         </form>
       </header>
+      <DisplayResults result={results} />
     </div>
   );
 }
