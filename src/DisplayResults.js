@@ -8,6 +8,16 @@ export default function DisplayResults(props) {
     return (
       <div className="DisplayResults">
         <h3>{props.result.word}</h3>
+        {props.result.phonetics.map((phonetic, index) => {
+          return (
+            <div key={index}>
+              <a href={phonetic.audio} target="_blank" rel="noreferrer">
+                Listen
+              </a>
+              {phonetic.text}
+            </div>
+          );
+        })}
         <hr />
         {props.result.meanings.map((meaning, index) => {
           return (
