@@ -3,6 +3,7 @@ import Meanings from "./Meanings";
 import "./DisplayResults.css";
 
 export default function DisplayResults(props) {
+  console.log(props.result);
   if (props.result) {
     return (
       <div className="DisplayResults">
