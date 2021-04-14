@@ -38,6 +38,7 @@
 .Synonyms .synonym {
   margin: 0 1%;
   font-style: italic;
+  display: inline-flex;
 }
 .Meanings {
   font-family: "Lora", serif;
