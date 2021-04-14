@@ -1,11 +1,28 @@
-.DisplayResults {
-  background-color: #b8bfcf;
-  padding: 25px 25px 30px 25px;
+.DisplayResults .main-section {
+  text-align: center;
+  font-family: "Courgette", cursive;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #00296b;
+  margin: 1%;
+  padding: 1% 0;
+  box-shadow: 4px 4px 5px rgba(0, 41, 107, 0.4);
 }
+.Meanings .meanings-section {
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #00296b;
+  margin: 1%;
+  padding: 1% 2%;
+  box-shadow: 4px 4px 5px rgba(0, 41, 107, 0.4);
+}
+.Meanings h5,
 .DisplayResults h3 {
-  padding-bottom: 15px;
   font-family: "Courgette", cursive;
+  font-weight: bold;
 }
-.Meanings h5 {
-  font-family: "Courgette", cursive;
+.Synonyms .synonym {
+  margin: 0 1%;
 }
