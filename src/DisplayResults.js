@@ -20,13 +20,15 @@ export default function DisplayResults(props) {
             );
           })}
         </section>
-        {props.result.meanings.map((meaning, index) => {
-          return (
-            <div key={index}>
-              <Meanings meaning={meaning} />
-            </div>
-          );
-        })}
+        <section className="meanings-section">
+          {props.result.meanings.map((meaning, index) => {
+            return (
+              <div key={index} className="divider">
+                <Meanings meaning={meaning} />
+              </div>
+            );
+          })}
+        </section>
       </div>
     );
   } else {

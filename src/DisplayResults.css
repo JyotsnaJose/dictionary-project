@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
 .DisplayResults .main-section {
   text-align: center;
   font-family: "Courgette", cursive;
@@ -9,7 +10,7 @@
   padding: 1% 0;
   box-shadow: 4px 4px 5px rgba(0, 41, 107, 0.4);
 }
-.Meanings .meanings-section {
+.DisplayResults .meanings-section {
   border-style: solid;
   border-radius: 8px;
   border-width: 2px;
@@ -20,9 +21,24 @@
 }
 .Meanings h5,
 .DisplayResults h3 {
-  font-family: "Courgette", cursive;
+  /* font-family: "Courgette", cursive; */
+  font-family: "Lora", serif;
   font-weight: bold;
+  font-style: italic;
+}
+
+.DisplayResults .divider {
+  border-bottom: dashed;
+  border-color: #a1cdf7;
+  padding: 1% 0;
+}
+.DisplayResults .divider:last-of-type {
+  border-bottom: none;
 }
 .Synonyms .synonym {
   margin: 0 1%;
+  font-style: italic;
+}
+.Meanings {
+  font-family: "Lora", serif;
 }
