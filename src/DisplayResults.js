@@ -23,7 +23,7 @@ export default function DisplayResults(props) {
         </section>
         <section className="meanings-section">
           <div className="row">
-            <div className="col-7">
+            <div className="col-md-7">
               {props.result.meanings.map((meaning, index) => {
                 return (
                   <div key={index} className="divider">
@@ -32,7 +32,7 @@ export default function DisplayResults(props) {
                 );
               })}
             </div>
-            <div className="col-5">
+            <div className="col-md-5">
               <Photos photos={props.photos} />
             </div>
           </div>

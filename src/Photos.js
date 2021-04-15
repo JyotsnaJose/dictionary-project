@@ -19,6 +19,12 @@ export default function Photos(props) {
             );
           })}
         </div>
+        <small>
+          Images from{" "}
+          <a href="https://www.pexels.com/" target="_blank" rel="noreferrer">
+            Pexels
+          </a>
+        </small>
       </div>
     );
   } else {
