@@ -43,3 +43,8 @@
 .Meanings {
   font-family: "Lora", serif;
 }
+
+.Photos img {
+  border-radius: 4px;
+  margin: 6%;
+}

@@ -1,9 +1,10 @@
 import React from "react";
 import Meanings from "./Meanings";
+import Photos from "./Photos";
 import "./DisplayResults.css";
 
 export default function DisplayResults(props) {
-  console.log(props.result);
+  console.log(props.photos);
   if (props.result) {
     return (
       <div className="DisplayResults">
@@ -21,13 +22,20 @@ export default function DisplayResults(props) {
           })}
         </section>
         <section className="meanings-section">
-          {props.result.meanings.map((meaning, index) => {
-            return (
-              <div key={index} className="divider">
-                <Meanings meaning={meaning} />
-              </div>
-            );
-          })}
+          <div className="row">
+            <div className="col-7">
+              {props.result.meanings.map((meaning, index) => {
+                return (
+                  <div key={index} className="divider">
+                    <Meanings meaning={meaning} />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="col-5">
+              <Photos photos={props.photos} />
+            </div>
+          </div>
         </section>
       </div>
     );

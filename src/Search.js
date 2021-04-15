@@ -5,6 +5,7 @@ import DisplayResults from "./DisplayResults";
 export default function Search(props) {
   let [searchword, setSearchword] = useState(props.default);
   let [results, setResults] = useState(null);
+  let [photos, setPhotos] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
   function handleSearch(event) {
@@ -26,6 +27,15 @@ export default function Search(props) {
     //api Call - https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchword}`;
     axios.get(apiUrl).then(getUrlResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000012bb1b3dc0472418f872afc1bbb83184d";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${searchword}&per_page=9`;
+    const header = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: header }).then(handlePhotos);
+  }
+  function handlePhotos(response) {
+    setPhotos(response.data);
   }
 
   if (loaded) {
@@ -77,7 +87,7 @@ export default function Search(props) {
             </a>
           </small>
         </header>
-        <DisplayResults result={results} />
+        <DisplayResults result={results} photos={photos} />
       </div>
     );
   } else {
