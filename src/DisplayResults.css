@@ -26,6 +26,9 @@
   font-weight: bold;
   font-style: italic;
 }
+.DisplayResults h3 {
+  display: inline;
+}
 
 .DisplayResults .divider {
   border-bottom: dashed;
@@ -48,4 +51,13 @@
   border-radius: 4px;
   margin-bottom: 10%;
   margin-top: 15%;
+}
+.Audio {
+  display: inline;
+  margin-right: 2px;
+}
+.Audio .audioButton {
+  border-color: #00296b;
+  border-radius: 50%;
+  background-color: #00296b;
 }
