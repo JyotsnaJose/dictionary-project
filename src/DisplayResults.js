@@ -18,9 +18,7 @@ export default function DisplayResults(props) {
                 {/* <a href={phonetic.audio} target="_blank" rel="noreferrer">
                   Listen
                 </a> */}
-                <Audio audio={phonetic.audio} />
-
-                {phonetic.text}
+                <Audio audio={phonetic} />
               </div>
             );
           })}

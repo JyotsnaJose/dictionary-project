@@ -42,6 +42,7 @@
   margin: 0 1%;
   font-style: italic;
   display: inline-flex;
+  font-size: 14px;
 }
 .Meanings {
   font-family: "Lora", serif;
@@ -60,4 +61,7 @@
   border-color: #00296b;
   border-radius: 50%;
   background-color: #00296b;
+}
+.Audio .volume {
+  color: white;
 }
