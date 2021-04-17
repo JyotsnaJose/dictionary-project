@@ -11,7 +11,6 @@ export default function DisplayResults(props) {
       <div className="DisplayResults">
         <section className="main-section">
           <h3>{props.result.word}</h3>
-          {console.log(props.result.phonetics)}
           {props.result.phonetics.map((phonetic, index) => {
             return (
               <div key={index}>

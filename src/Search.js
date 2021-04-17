@@ -15,14 +15,17 @@ export default function Search(props) {
   function getUrlResponse(response) {
     setResults(response.data[0]);
   }
+  function handlePhotos(response) {
+    setPhotos(response.data);
+  }
   function handleSearchInput(event) {
     setSearchword(event.target.value);
   }
-
   function load() {
     setLoaded(true);
     search();
   }
+
   function search() {
     //api Call - https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchword}`;
@@ -34,20 +37,20 @@ export default function Search(props) {
     const header = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: header }).then(handlePhotos);
   }
-  function handlePhotos(response) {
-    setPhotos(response.data);
-  }
 
   if (loaded) {
     return (
       <div className="Search">
         <header className="header">
-          <h1>Dictionary</h1>
+          <h1>
+            <i className="fas fa-book-open"></i> Dictionary
+          </h1>
           <form onSubmit={handleSearch}>
             <div className="input-group">
               <input
                 type="search"
                 className="form-control"
+                placeholder="What word do you want to look up?"
                 onChange={handleSearchInput}
               ></input>
               <button

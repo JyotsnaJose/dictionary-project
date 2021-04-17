@@ -2,6 +2,7 @@ import React from "react";
 import "./DisplayResults.css";
 
 export default function Photos(props) {
+  // console.log(props.photos);
   if (props.photos) {
     return (
       <div className="Photos">
@@ -20,7 +21,7 @@ export default function Photos(props) {
             );
           })}
         </div>
-        <small>
+        <small className="pexelLink">
           Images from{" "}
           <a href="https://www.pexels.com/" target="_blank" rel="noreferrer">
             Pexels
