@@ -12,10 +12,11 @@
 }
 .Search h1 {
   font-size: 60px;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  margin-top: 2%;
 }
 .Search form {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 .Search .searchButton {

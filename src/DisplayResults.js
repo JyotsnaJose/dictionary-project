@@ -2,7 +2,6 @@ import React from "react";
 import Meanings from "./Meanings";
 import Photos from "./Photos";
 import Audio from "./Audio";
-// import useSound from "use-sound";
 import "./DisplayResults.css";
 
 export default function DisplayResults(props) {
@@ -14,9 +13,6 @@ export default function DisplayResults(props) {
           {props.result.phonetics.map((phonetic, index) => {
             return (
               <div key={index}>
-                {/* <a href={phonetic.audio} target="_blank" rel="noreferrer">
-                  Listen
-                </a> */}
                 <Audio audio={phonetic} />
               </div>
             );
