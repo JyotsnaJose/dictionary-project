@@ -2,16 +2,18 @@ import React from "react";
 import "./DisplayResults.css";
 
 export default function Photos(props) {
+  console.log(props.photos);
+
   if (props.photos) {
     return (
       <div className="Photos">
         <div className="row">
-          {props.photos.photos.map((photo, index) => {
+          {props.photos.hits.map((photo, index) => {
             return (
               <div key={index} className="col-4 pictures">
-                <a href={photo.src.original} target="_blank" rel="noreferrer">
+                <a href={photo.largeImageURL} target="_blank" rel="noreferrer">
                   <img
-                    src={photo.src.landscape}
+                    src={photo.previewURL}
                     alt="pic"
                     className="img-fluid"
                   ></img>
@@ -20,10 +22,10 @@ export default function Photos(props) {
             );
           })}
         </div>
-        <small className="pexelLink">
+        <small className="pixabayLink">
           Images from{" "}
-          <a href="https://www.pexels.com/" target="_blank" rel="noreferrer">
-            Pexels
+          <a href="https://www.pixabay.com/" target="_blank" rel="noreferrer">
+            Pixabay
           </a>
         </small>
       </div>

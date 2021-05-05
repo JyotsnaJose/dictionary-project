@@ -31,12 +31,10 @@ export default function Search(props) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchword}`;
     axios.get(apiUrl).then(getUrlResponse);
 
-    //api call for Pexels images
-    let pexelsApiKey =
-      "563492ad6f917000010000012bb1b3dc0472418f872afc1bbb83184d";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${searchword}&per_page=9`;
-    const header = { Authorization: `Bearer ${pexelsApiKey}` };
-    axios.get(pexelsApiUrl, { headers: header }).then(handlePhotos);
+    //api call from Pixabay images
+    let pixabayApiKey = "21483618-19bc02932d06ce830e4b934d3";
+    let pixabayApiUrl = `https://pixabay.com/api/?key=${pixabayApiKey}&q=${searchword}&image_type=photo&per_page=9`;
+    axios.get(pixabayApiUrl).then(handlePhotos);
   }
 
   if (loaded) {
