@@ -80,7 +80,7 @@ export default function Search(props) {
             </a>{" "}
             and hosted on
             <a
-              href="https://suspicious-swanson-957d5e.netlify.app"
+              href="https://dictionary-react-jyotsna.netlify.app"
               target="_blank"
               rel="noreferrer"
             >
